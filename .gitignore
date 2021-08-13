@@ -1,0 +1,25 @@
+# MacOS files
+.DS_Store
+
+# Gradle generated files
+.gradle
+bin
+build/
+
+# Eclipse / STS IDE files
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA files
+.idea
+*.ipr
+*.iml
+*.iws
+lib/
+out/
+target/

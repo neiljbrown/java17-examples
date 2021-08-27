@@ -1,0 +1,45 @@
+<!--
+  ~ Copyright 2021 - present the original author or authors.
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~            http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<!--
+ * *********************************************************************************************************************
+ * Configuration of the logback logging framework for production.
+ * For help with configuration syntax see the logback manual - http://logback.qos.ch/manual/configuration.html
+ * Formatting characters used in patterns are documented in http://logback.qos.ch/manual/layouts.html
+ * *********************************************************************************************************************
+-->
+<configuration scan="false" scanPeriod="10 seconds" debug="false">
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%date{ISO8601} [%thread %X] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Parent logger for all the service's classes -->
+    <!-- To permanently override config'd log-level on startup (e.g. use debug in dev) set Java system property or env
+         var 'SERVICE_LOG_LEVEL'. (To dynamically reconfigure the log-level post-startup, use JMX). -->
+    <!-- Additivity controls whether logs written by these classes are also written to root logger's default appenders.
+         This is enabled as it provides a fallback (non-persistent) source of app logs should there be a problem with
+         logging to other appenders, plus (in the dev env at least) it's convenient to see all logs in one location. -->
+    <logger name="com.neiljbrown.example" level="${SERVICE_LOG_LEVEL:-DEBUG}" additivity="true" />
+
+    <!-- 'root' logger - Defines default log-level and appender used for all classes unless overridden by child logger.-->
+    <!-- By default, log all messages, for all classes, at INFO and above to STDOUT (application's console). -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>

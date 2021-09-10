@@ -1,5 +1,5 @@
 /*
- *  Copyright 2019-present the original author or authors.
+ *  Copyright 2021-present the original author or authors.
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.slf4j.LoggerFactory;
  * Provides examples of using Switch Expressions, implemented as a JUnit test case.
  * <p>
  * From JDK 14 (March 2020) onwards, Java allows the switch keyword to be used to declare an expression, whilst
- * continuing to support the original switch statement. In addition to making it easier to write & maintain switch
+ * continuing to support the original switch statement. In addition to making it easier to write and maintain switch
  * statements by reducing some of the boilerplate associated with using switch statements for common cases, this
  * change is also part of a broader project to enhance Java to provide support for pattern matching. (See below for
  * more details)

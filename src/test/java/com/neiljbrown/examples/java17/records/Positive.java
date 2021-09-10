@@ -23,5 +23,6 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Positive {
+  /** @return The message to use to report the validation constraint failed. */
   String message();
 }

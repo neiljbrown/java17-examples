@@ -283,6 +283,8 @@ public class RecordsExamplesTest {
    * {@code @Target(ElementType.PARAMETERS)} for constructor params, {@code @Target(ElementType.METHOD)} for accessor
    * methods, and/or {@code @Target(ElementType.FIELD)}. However, this is only possible if you are writing you're own
    * annotations, and not if you're using third party library of annotations.
+   *
+   * @throws Exception if an unexpected error occurs on execution of this test.
    */
   @Test
   public void test_annotationsAreByDefaultAppliedToAllGeneratedRecordMembers() throws Exception {

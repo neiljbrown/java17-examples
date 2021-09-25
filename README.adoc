@@ -30,6 +30,9 @@ are summarised below, categorised by JDK release, along with a link to their fin
 
 * *Sealed Classes* - See https://openjdk.java.net/jeps/409[JEP 409: Sealed Classes].
 
+For a full list of the JEPs that were added since the previous JDK 11 LTS release, see
+https://openjdk.java.net/projects/jdk/17/jeps-since-jdk-11.
+
 == Source Code
 The examples are implemented as a set of easy to run tests, using JUnit (5). The source code for the examples can be
 found in the src/test/java folder.

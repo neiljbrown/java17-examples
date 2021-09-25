@@ -39,7 +39,7 @@ plugins {
 ext {
   // Cribbed from https://github.com/mindscratch/reactor-offline/blob/master/build.gradle
   javadocLinks = [
-    "https://docs.oracle.com/en/java/javase/17/docs/api/index.html"
+    "https://docs.oracle.com/en/java/javase/17/docs/api/"
   ] as String[]
 }
 

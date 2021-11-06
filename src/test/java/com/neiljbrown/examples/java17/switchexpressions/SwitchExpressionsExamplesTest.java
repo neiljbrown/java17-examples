@@ -54,7 +54,7 @@ public class SwitchExpressionsExamplesTest {
   private static final Logger logger = LoggerFactory.getLogger(SwitchExpressionsExamplesTest.class);
 
   /**
-	 * Provides an example of a switch expression that uses an enum for its selector variable, which serves to
+   * Provides an example of a switch expression that uses an enum for its selector variable, which serves to
    * illustrate a number of the new syntax and features of switch expressions, including -
    * <p>
    * 1) The ability to write a single case label to match multiple values, rather than needing one case label per value.
@@ -62,7 +62,7 @@ public class SwitchExpressionsExamplesTest {
    * 2) Execution of case blocks no longer fall through to the next case block by default, which removes the need to
    * write break statements at the end of case blocks in the most common cases, removing a common source of bugs.
    * <p>
-   * 4) You can return a value from a case block that can be assigned to a local var, i.e. switch is now an expression.
+   * 3) You can return a value from a case block that can be assigned to a local var, i.e. switch is now an expression.
    * <p>
    * For comparison purposes the example is first implemented using a switch statement.
 	 */

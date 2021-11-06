@@ -29,16 +29,14 @@ import org.slf4j.LoggerFactory;
  * <p>
  * From JDK 14 (March 2020) onwards, Java allows the switch keyword to be used to declare an expression, whilst
  * continuing to support the original switch statement. In addition to making it easier to write and maintain switch
- * statements by reducing some of the boilerplate associated with using switch statements for common cases, this
- * change is also part of a broader project to enhance Java to provide support for pattern matching. (See below for
- * more details)
+ * statements by reducing some of the associated boilerplate for common cases, this change is also part of a broader
+ * project to enhance Java to support pattern matching. (See below for more details)
  * <p>
- * In summary, switch expressions provide the following new features to address problems with an extend switch
- * statements -
+ * In summary, switch expressions provide the following new features to address problems with switch statements -
  * 1) The ability to write a single case label to match multiple values, rather than needing one case per value.
  * 2) Variables declared in a case block are now private in scope to that block rather than global for all
  * subsequent case blocks.
- * 3) Execution of case blocks no longer falls through to the next case block by default, which removes the need to
+ * 3) Execution of case blocks no longer fall through to the next case block by default, which removes the need to
  * write break statements at the end of case blocks in the most common cases, removing a common source of bugs.
  * 4) You can return a value from a case block that can be assigned to a local var, i.e. switch is now an expression.
  *
@@ -61,7 +59,7 @@ public class SwitchExpressionsExamplesTest {
    * <p>
    * 1) The ability to write a single case label to match multiple values, rather than needing one case label per value.
    * <p>
-   * 3) Execution of case blocks no longer falls through to the next case block by default, which removes the need to
+   * 2) Execution of case blocks no longer fall through to the next case block by default, which removes the need to
    * write break statements at the end of case blocks in the most common cases, removing a common source of bugs.
    * <p>
    * 4) You can return a value from a case block that can be assigned to a local var, i.e. switch is now an expression.
